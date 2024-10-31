@@ -35,17 +35,17 @@ window.addEventListener("DOMContentLoaded", function () {
   breakpoint.addEventListener("change", handleResize);
 
   showButton.addEventListener("click", function () {
-    if (showButton.classList.contains("show-all-btn")) {
-      showButton.classList.remove("show-all-btn");
+    if (showButton.classList.contains("show-all--rotate")) {
+      showButton.classList.remove("show-all--rotate");
       container.classList.add("swiper--opened");
       container.classList.add("swiper-wrapper--margin-bottom");
-      showButton.classList.add("show-less");
+      showButton.classList.add("show-less--rotate");
       showButton.textContent = "Скрыть";
     } else {
-      showButton.classList.add("show-all-btn");
+      showButton.classList.add("show-all--rotate");
       container.classList.remove("swiper--opened");
       container.classList.remove("swiper-wrapper--margin-bottom");
-      showButton.classList.remove("show-less");
+      showButton.classList.remove("show-less--rotate");
       showButton.textContent = "Показать все";
     }
   });
