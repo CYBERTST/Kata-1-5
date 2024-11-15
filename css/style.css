@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -9,42 +10,36 @@ html {
 
 button {
   padding: 0;
-  font-family: "TT Lakes", sans-serif;
+  font-family: 'TT Lakes', sans-serif;
   cursor: pointer;
   border: none;
 }
 
 @font-face {
-  font-family: "TT Lakes";
-  src: local("Lexend Peta Regular"), local("LexendPeta-Regular"),
-    url("../fonts/TTLakes-Regular.woff") format("woff"),
-    url(../fonts/TTLakes-Regular.ttf) format("ttf");
+  font-family: 'TT Lakes';
+  src: local("Lexend Peta Regular"), local("LexendPeta-Regular"), url("../fonts/TTLakes-Regular.woff") format("woff"), url(../fonts/TTLakes-Regular.ttf) format("ttf");
   font-weight: normal;
 }
 @font-face {
-  font-family: "TT Lakes bold";
-  src: local("Lexend Peta Regular"), local("LexendPeta-Regular"),
-    url("../fonts/TTLakes-ExtraBold.woff") format("woff"),
-    url(../fonts/TTLakes-ExtraBold.ttf) format("ttf");
+  font-family: 'TT Lakes bold';
+  src: local("Lexend Peta Regular"), local("LexendPeta-Regular"), url("../fonts/TTLakes-ExtraBold.woff") format("woff"), url(../fonts/TTLakes-ExtraBold.ttf) format("ttf");
   font-weight: 800;
 }
 @font-face {
-  font-family: "TT Lakes medium";
-  src: local("Lexend Peta Regular"), local("LexendPeta-Regular"),
-    url("../fonts/TTLakes-Medium.woff") format("woff"),
-    url(../fonts/TTLakes-Medium.ttf) format("ttf");
+  font-family: 'TT Lakes medium';
+  src: local("Lexend Peta Regular"), local("LexendPeta-Regular"), url("../fonts/TTLakes-Medium.woff") format("woff"), url(../fonts/TTLakes-Medium.ttf) format("ttf");
   font-weight: 500;
 }
 body {
   margin: 0;
   padding: 0;
-  font-family: "TT Lakes", sans-serif;
+  font-family: 'TT Lakes', sans-serif;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "TT Lakes bold", sans-serif;
+  font-family: 'TT Lakes bold', sans-serif;
   margin: 0;
   padding: 0;
   letter-spacing: -0.6px;
@@ -52,7 +47,7 @@ h3 {
 
 .repair-title {
   font-weight: 500;
-  font-family: "TT Lakes";
+  font-family: 'TT Lakes';
   color: #7e7e82;
   line-height: 24px;
   text-transform: uppercase;
@@ -76,6 +71,7 @@ h3 {
 .content__container {
   padding: 0 16px;
 }
+
 .swiper {
   margin-left: auto;
   margin-right: auto;
@@ -88,19 +84,31 @@ h3 {
 }
 .swiper-btn {
   transition: transform ease 0.34s;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: url(../images/go.svg);
+  text-decoration: none;
+}
+.swiper-btn:visited {
+  text-decoration: none;
 }
 .swiper-btn:hover {
   transform: scale(1.2);
+}
+.swiper-pagination {
+  position: static;
 }
 .swiper-pagination-bullet {
   background: #dddddd;
   opacity: 1;
 }
-
 .swiper-pagination-bullet-active {
   background: #b5b6bc;
 }
-
 .swiper-slide {
   background-color: white;
   align-items: center;
@@ -115,23 +123,6 @@ h3 {
   height: unset;
   width: unset;
 }
-.swiper-btn,
-.swiper-btn:visited {
-  text-decoration: none;
-}
-.swiper-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  content: "";
-  width: 40px;
-  height: 40px;
-  background: url(../images/go.svg);
-}
-
-.swiper-pagination {
-  position: static;
-}
 
 .show-all-btn,
 .show-less {
@@ -142,11 +133,11 @@ h3 {
   .swiper-wrapper {
     gap: 16px;
   }
+
   .swiper-pagination {
     margin-top: 16px;
   }
 }
-
 @media (min-width: 768px) {
   .swiper-slide {
     min-width: unset;
@@ -156,14 +147,6 @@ h3 {
   .swiper-pagination {
     display: none;
   }
-  .content__container {
-    padding: 0 24px 34px;
-  }
-  .repair__title-box {
-    margin-bottom: 40px;
-    margin-right: -24px;
-  }
-
   .swiper-wrapper {
     position: relative;
     width: 100%;
@@ -182,6 +165,16 @@ h3 {
   .swiper--opened {
     height: auto;
   }
+
+  .content__container {
+    padding: 0 24px 34px;
+  }
+
+  .repair__title-box {
+    margin-bottom: 40px;
+    margin-right: -24px;
+  }
+
   .show-all-btn {
     display: block;
     position: relative;
@@ -193,7 +186,7 @@ h3 {
     cursor: pointer;
   }
   .show-all--rotate::before {
-    content: "";
+    content: '';
     background-image: url(../ic/icon-button-arrow.svg);
     background-repeat: no-repeat;
     position: absolute;
@@ -203,7 +196,7 @@ h3 {
     left: 2px;
   }
   .show-less--rotate::before {
-    content: "";
+    content: '';
     background-image: url(../ic/icon-button-arrow.svg);
     background-repeat: no-repeat;
     position: absolute;
@@ -214,14 +207,15 @@ h3 {
     transform: rotate(180deg);
   }
 }
-
 @media (min-width: 1120px) {
   .repair__title-box {
     margin-right: -32px;
   }
+
   .content__container {
     padding: 0 32px 32px 32px;
   }
+
   .swiper-wrapper {
     gap: 16px 32px;
   }
@@ -229,7 +223,6 @@ h3 {
     max-width: calc((100% - 96px) / 4);
   }
 }
-
 @media (max-width: 768px) {
   .swiper {
     mask: linear-gradient(90deg, #fff 95%, transparent);
